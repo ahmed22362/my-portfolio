@@ -329,6 +329,14 @@ ul {
 .icon:hover img {
   transform: translateY(-2px);
 }
+.icon__svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: transform 0.25s ease;
+}
+.icon:hover .icon__svg {
+  transform: translateY(-2px);
+}
 .icon span {
   position: absolute;
   left: 50%;
