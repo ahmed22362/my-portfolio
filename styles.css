@@ -640,107 +640,109 @@ a.contact__row:hover {
     opacity: 1;
     transform: none;
   }
-  #samurai-bg {
+  #egypt-bg {
     display: none;
   }
 }
 
-/* ----- Samurai background shapes ----- */
-#samurai-bg {
+/* ----- Egyptian background shapes ----- */
+#egypt-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
 }
-#samurai-bg svg {
+#egypt-bg svg {
   width: 100%;
   height: 100%;
 }
 
-/* Enso — large open brushstroke circle */
-.sam-enso {
+/* Sun disk of Ra */
+.egy-sun {
   fill: none;
   stroke: #38bdf8;
-  stroke-width: 28;
-  stroke-linecap: round;
+  stroke-width: 3;
   opacity: 0.055;
-  stroke-dasharray: 1980 145;
 }
-.sam-enso-inner {
+.egy-sun-inner {
   fill: none;
   stroke: #0ea5e9;
   stroke-width: 1.5;
   opacity: 0.04;
   stroke-dasharray: 7 11;
 }
+.egy-ray {
+  fill: none;
+  stroke: #7dd3fc;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  opacity: 0.04;
+}
 
-/* Katana blade */
-.sam-blade {
+/* Obelisk */
+.egy-obelisk {
   fill: none;
   stroke: #7dd3fc;
   stroke-linecap: round;
+  stroke-width: 1.5;
   opacity: 0.065;
 }
-.sam-blade-edge {
-  fill: none;
-  stroke: #bae6fd;
-  stroke-linecap: round;
-  opacity: 0.028;
-}
-.sam-handle {
-  fill: none;
-  stroke: #7dd3fc;
-  stroke-linecap: round;
-  stroke-width: 4;
-  opacity: 0.025;
-}
 
-/* Sword slash marks */
-.sam-slash {
+/* Eye of Horus */
+.egy-eye {
   fill: none;
   stroke: #0ea5e9;
   stroke-linecap: round;
-  opacity: 0.042;
+  stroke-width: 1.8;
+  opacity: 0.055;
+}
+.egy-eye-pupil {
+  fill: #38bdf8;
+  stroke: none;
+  opacity: 0.5;
 }
 
-/* Torii gate */
-.sam-torii {
+/* Pyramid */
+.egy-pyramid {
   fill: none;
   stroke: #0284c7;
   stroke-linecap: round;
-  opacity: 0.045;
+  stroke-width: 1.8;
+  opacity: 0.048;
 }
 
-/* Kamon geometric crest */
-.sam-kamon {
+/* Ankh */
+.egy-ankh {
   fill: none;
   stroke: #38bdf8;
+  stroke-linecap: round;
+  stroke-width: 1.2;
   opacity: 0.055;
 }
 
-/* Hexagonal mon badge */
-.sam-hex {
+/* Cartouche badge */
+.egy-cartouche {
   fill: none;
   stroke: #0369a1;
   stroke-width: 1.5;
   opacity: 0.055;
 }
 
-/* Brushwork scatter dots */
-.sam-dot {
+/* Sand / star scatter dots */
+.egy-dot {
   fill: #7dd3fc;
   opacity: 0.14;
 }
 
 /* Hide heavier shapes on small screens */
 @media (max-width: 768px) {
-  .sam-torii,
-  .sam-kamon,
-  .sam-hex {
+  .egy-pyramid,
+  .egy-ankh,
+  .egy-cartouche {
     display: none;
   }
-  .sam-enso {
+  .egy-sun {
     opacity: 0.04;
   }
 }

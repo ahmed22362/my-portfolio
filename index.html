@@ -18,14 +18,14 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   </head>
   <body>
-    <!-- ═══ Samurai background layer ═══ -->
-    <div id="samurai-bg" aria-hidden="true">
+    <!-- ═══ Egyptian background layer ═══ -->
+    <div id="egypt-bg" aria-hidden="true">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1920 1080"
         preserveAspectRatio="xMidYMid slice"
       >
-        <!-- 1. Enso (Zen brushstroke circle) — slowly rotating, upper-right -->
+        <!-- 1. Sun disk of Ra — slowly rotating, upper-right -->
         <g>
           <animateTransform
             attributeName="transform"
@@ -35,98 +35,94 @@
             dur="90s"
             repeatCount="indefinite"
           />
-          <circle class="sam-enso" cx="1560" cy="255" r="320" />
+          <circle class="egy-sun" cx="1560" cy="255" r="280" />
+          <g class="egy-ray">
+            <line x1="1560" y1="-40" x2="1560" y2="-90" />
+            <line x1="1769" y1="46" x2="1804" y2="11" />
+            <line x1="1855" y1="255" x2="1905" y2="255" />
+            <line x1="1769" y1="464" x2="1804" y2="499" />
+            <line x1="1560" y1="550" x2="1560" y2="600" />
+            <line x1="1351" y1="464" x2="1316" y2="499" />
+            <line x1="1265" y1="255" x2="1215" y2="255" />
+            <line x1="1351" y1="46" x2="1316" y2="11" />
+          </g>
         </g>
-        <!-- Enso inner dashed ring -->
-        <circle class="sam-enso-inner" cx="1560" cy="255" r="278" />
+        <!-- Static inner dashed ring -->
+        <circle class="egy-sun-inner" cx="1560" cy="255" r="220" />
 
-        <!-- 2. Katana blade — diagonal across hero area -->
-        <!-- Main cutting edge -->
-        <line
-          class="sam-blade"
-          x1="148"
-          y1="55"
-          x2="522"
-          y2="895"
-          stroke-width="2"
-        />
-        <!-- Secondary edge (blade thickness) -->
-        <line
-          class="sam-blade-edge"
-          x1="155"
-          y1="55"
-          x2="529"
-          y2="895"
-          stroke-width="0.8"
-        />
-        <!-- Tsuba (guard) — diamond at balance point -->
-        <g transform="translate(333, 475)">
-          <polygon
-            class="sam-blade"
-            points="0,-22 17,0 0,22 -17,0"
-            stroke-width="1.6"
+        <!-- 2. Obelisk — left side, tall narrow monument -->
+        <g class="egy-obelisk" transform="translate(165, 70)">
+          <!-- Pyramidion (pointed cap) -->
+          <polygon points="13,0 37,0 25,-38" />
+          <!-- Main shaft: trapezoid, narrower at top -->
+          <polygon points="8,0 42,0 55,720 -5,720" />
+          <!-- Horizontal register lines (hieroglyph rows) -->
+          <line x1="10" y1="80" x2="40" y2="80" />
+          <line x1="9" y1="165" x2="41" y2="165" />
+          <line x1="8" y1="250" x2="42" y2="250" />
+          <line x1="7" y1="335" x2="43" y2="335" />
+          <line x1="6" y1="420" x2="44" y2="420" />
+          <line x1="5" y1="505" x2="45" y2="505" />
+        </g>
+
+        <!-- 3. Eye of Horus (Wadjet) — mid-right area -->
+        <g class="egy-eye" transform="translate(1150, 500)">
+          <!-- Almond eye outline -->
+          <path
+            d="M -90,0 Q -45,-44 0,-22 Q 45,-44 90,0 Q 45,44 0,22 Q -45,44 -90,0 Z"
           />
-          <circle class="sam-blade" cx="0" cy="0" r="27" stroke-width="0.8" />
-        </g>
-        <!-- Tsuka-ito (handle wrap) hint -->
-        <g class="sam-handle">
-          <line x1="340" y1="500" x2="368" y2="575" />
-          <line x1="350" y1="522" x2="378" y2="597" />
-          <line x1="360" y1="544" x2="388" y2="619" />
-          <line x1="370" y1="566" x2="398" y2="641" />
-        </g>
-
-        <!-- 3. Three sword-slash marks — mid-right area -->
-        <g class="sam-slash">
-          <line x1="1108" y1="570" x2="1298" y2="295" stroke-width="3" />
-          <line x1="1152" y1="605" x2="1342" y2="330" stroke-width="1.8" />
-          <line x1="1196" y1="640" x2="1386" y2="365" stroke-width="1" />
+          <!-- Iris ring -->
+          <circle cx="0" cy="0" r="20" />
+          <!-- Pupil -->
+          <circle class="egy-eye-pupil" cx="0" cy="0" r="8" />
+          <!-- Right decorative tail -->
+          <path d="M 72,12 Q 100,50 78,90 Q 60,110 40,128" />
+          <!-- Left hook/brow curl -->
+          <path d="M -60,15 Q -90,30 -100,10 Q -110,-10 -80,-24" />
+          <!-- Upper brow arc -->
+          <path d="M -68,-28 Q 0,-72 68,-28" />
         </g>
 
-        <!-- 4. Torii gate outline — right side, mid-lower -->
-        <g class="sam-torii" transform="translate(1698, 565)">
-          <!-- Left pillar -->
-          <line x1="0" y1="32" x2="0" y2="255" stroke-width="10" />
-          <!-- Right pillar -->
-          <line x1="144" y1="32" x2="144" y2="255" stroke-width="10" />
-          <!-- Kasagi (top curved beam) -->
-          <path d="M -20,36 Q 72,-4 164,36" stroke-width="14" />
-          <!-- Shimaki (upper flat bar) -->
-          <line x1="8" y1="70" x2="136" y2="70" stroke-width="4" />
-          <!-- Nuki (middle crossbar) -->
-          <line x1="-6" y1="98" x2="150" y2="98" stroke-width="7" />
+        <!-- 4. Pyramid outline — right side, lower area -->
+        <g class="egy-pyramid" transform="translate(1580, 440)">
+          <!-- Outer triangle -->
+          <polygon points="140,0 280,380 0,380" />
+          <!-- Entrance passage triangle -->
+          <polygon points="140,200 160,380 120,380" />
+          <!-- Horizontal stone course lines -->
+          <line x1="108" y1="100" x2="172" y2="100" />
+          <line x1="70" y1="200" x2="210" y2="200" />
+          <line x1="35" y1="300" x2="245" y2="300" />
+          <!-- Vertical center axis -->
+          <line x1="140" y1="0" x2="140" y2="380" />
         </g>
 
-        <!-- 5. Kamon (Japanese family crest) geometric pattern — lower-left -->
-        <g class="sam-kamon" transform="translate(152, 728)" stroke-width="1.2">
-          <circle cx="0" cy="0" r="66" />
-          <circle cx="0" cy="0" r="46" />
-          <circle cx="0" cy="0" r="24" />
-          <line x1="0" y1="-66" x2="0" y2="66" />
-          <line x1="-66" y1="0" x2="66" y2="0" />
-          <line x1="-47" y1="-47" x2="47" y2="47" />
-          <line x1="47" y1="-47" x2="-47" y2="47" />
-          <circle cx="0" cy="-46" r="11" />
-          <circle cx="33" cy="-33" r="11" />
-          <circle cx="46" cy="0" r="11" />
-          <circle cx="33" cy="33" r="11" />
-          <circle cx="0" cy="46" r="11" />
-          <circle cx="-33" cy="33" r="11" />
-          <circle cx="-46" cy="0" r="11" />
-          <circle cx="-33" cy="-33" r="11" />
+        <!-- 5. Ankh — lower left -->
+        <g class="egy-ankh" transform="translate(152, 762)">
+          <!-- Loop outer oval -->
+          <ellipse cx="0" cy="-42" rx="28" ry="34" />
+          <!-- Loop inner oval -->
+          <ellipse cx="0" cy="-42" rx="14" ry="18" />
+          <!-- Vertical shaft -->
+          <line x1="0" y1="0" x2="0" y2="90" />
+          <!-- Horizontal crossbar -->
+          <line x1="-40" y1="14" x2="40" y2="14" />
         </g>
 
-        <!-- 6. Hexagonal mon badge — top-left accent -->
-        <g class="sam-hex" transform="translate(88, 110)">
-          <polygon points="0,-48 41,-24 41,24 0,48 -41,24 -41,-24" />
-          <polygon points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16" />
-          <line x1="-41" y1="-24" x2="41" y2="24" />
-          <line x1="-41" y1="24" x2="41" y2="-24" />
-          <line x1="0" y1="-48" x2="0" y2="48" />
+        <!-- 6. Cartouche badge — top-left accent -->
+        <g class="egy-cartouche" transform="translate(88, 108)">
+          <!-- Outer oval nameplate -->
+          <rect x="-35" y="-62" width="70" height="124" rx="35" />
+          <!-- Hieroglyph marks -->
+          <line x1="-18" y1="-38" x2="18" y2="-38" />
+          <circle cx="0" cy="-16" r="14" />
+          <line x1="-18" y1="6" x2="18" y2="6" />
+          <line x1="-10" y1="25" x2="10" y2="25" />
+          <circle cx="0" cy="42" r="8" />
         </g>
 
-        <!-- 7. Brushwork scatter dots -->
-        <g class="sam-dot">
+        <!-- 7. Scatter dots (sand / stars) -->
+        <g class="egy-dot">
           <circle cx="880" cy="92" r="1.5" />
           <circle cx="906" cy="74" r="1.2" />
           <circle cx="856" cy="116" r="1" />
@@ -138,6 +134,11 @@
           <circle cx="1540" cy="540" r="1.5" />
           <circle cx="1565" cy="558" r="1" />
           <circle cx="1518" cy="525" r="1.2" />
+          <circle cx="700" cy="150" r="1.3" />
+          <circle cx="720" cy="130" r="1" />
+          <circle cx="680" cy="178" r="1.5" />
+          <circle cx="440" cy="880" r="1.2" />
+          <circle cx="460" cy="860" r="1" />
         </g>
       </svg>
     </div>

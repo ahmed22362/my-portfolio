@@ -1,11 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="5" fill="#04111f"/>
-  <!-- Katana blade -->
-  <line x1="9" y1="4" x2="21" y2="26" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
-  <!-- Tsuba (guard) — diamond -->
-  <polygon points="15,13 17,10 19,13 17,16" fill="#0ea5e9"/>
-  <!-- Tsuba ring -->
-  <circle cx="17" cy="13" r="4.5" fill="none" stroke="#0369a1" stroke-width="1"/>
-  <!-- Tsuka (handle) — thick short line -->
-  <line x1="21" y1="26" x2="26" y2="30" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round"/>
+  <!-- Scarab beetle (sacred symbol of transformation) -->
+  <!-- Body — central oval -->
+  <ellipse cx="16" cy="17" rx="7" ry="8.5" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+  <!-- Head — small circle at top -->
+  <circle cx="16" cy="7.5" r="3.5" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+  <!-- Upper wings spread left and right -->
+  <path d="M 9,13 Q 4,10 3,15 Q 4,19 9,18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 23,13 Q 28,10 29,15 Q 28,19 23,18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Legs (3 per side, short strokes) -->
+  <line x1="9" y1="15" x2="5"  y2="14" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="9" y1="18" x2="5"  y2="19" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="9" y1="21" x2="6"  y2="23" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="23" y1="15" x2="27" y2="14" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="23" y1="18" x2="27" y2="19" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="23" y1="21" x2="26" y2="23" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Center body line -->
+  <line x1="16" y1="9" x2="16" y2="25" stroke="#0ea5e9" stroke-width="1" stroke-linecap="round"/>
 </svg>
